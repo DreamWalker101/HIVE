@@ -186,7 +186,7 @@ GWS auth note: if gws returns auth error → tell Ahmed to run: gws auth login
 # Priority: 1. Ollama local (free)  2. Gemini CLI (free)
 #           3. Groq API (free tier)  4. OpenAI (paid, last resort)
 
-GROQ_API_KEY  = os.getenv("GROQ_API_KEY", "REDACTED_GROQ_API_KEY")
+GROQ_API_KEY  = os.getenv("GROQ_API_KEY", "")
 GROQ_MODEL    = "llama-3.3-70b-versatile"
 OPENAI_KEY    = os.getenv("OPENAI_API_KEY", "")   # paid — only used if all else fails
 
