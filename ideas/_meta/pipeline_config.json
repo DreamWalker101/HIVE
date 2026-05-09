@@ -1,0 +1,6 @@
+{
+  "schema_version": "1.0.0",
+  "pipeline_version": "1.0.0",
+  "categories": ["claude-agents","claude-skills","claude-superpowers","ai-tools","prompt-engineering","api-features","updates"],
+  "relevance_threshold": 3
+}
