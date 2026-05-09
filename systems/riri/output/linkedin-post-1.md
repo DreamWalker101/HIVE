@@ -1,0 +1,1 @@
+I've connected my WhatsApp number to RiRi, my personal AI assistant, allowing me to use it as a terminal for my AI. This means I can text myself and RiRi responds, making it easy to access my AI from anywhere. I've also implemented intent routing, voice note transcription, and image understanding, making it a powerful tool for my daily tasks. #AI #WhatsApp #RiRi

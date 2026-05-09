@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//home/ahmed/.hermes/**)",
+      "Bash(grep NVIDIA_API_KEY ~/.nanobot/secrets.env | head -1)",
+      "Read(//home/ahmed/.nanobot/**)",
+      "Bash(curl -s -X POST https://integrate.api.nvidia.com/v1/chat/completions -H 'Authorization: Bearer REDACTED_NVIDIA_API_KEY' -H 'Content-Type: application/json' -d '{ *)",
+      "Bash(curl -s -X POST https://integrate.api.nvidia.com/v1/chat/completions -H 'Authorization: Bearer REDACTED_NVIDIA_API_KEY' -H 'Content-Type: application/json' -d '{\"model\": \"meta/llama-3.3-70b-instruct\", \"messages\": [{\"role\": \"user\", \"content\": \"hi\"}], \"max_tokens\": 10}')",
+      "Bash(git rev-parse --show-toplevel 2>/dev/null || echo \"not a git repo\" *)",
+      "Read(//home/ahmed/**)",
+      "Bash(git -C /home/ahmed/HIVE remote -v)",
+      "Bash(git -C /home/ahmed/HIVE status --short)",
+      "Bash(git -C /home/ahmed/HIVE status systems/riri/ --short)",
+      "Bash(git -C /home/ahmed/HIVE ls-files --others --exclude-standard systems/riri/)",
+      "Bash(git -C /home/ahmed/HIVE check-ignore -v systems/riri/sessions/INDEX.md)",
+      "Bash(git -C /home/ahmed/HIVE log --oneline -5)",
+      "Bash(git -C /home/ahmed/HIVE diff --name-only HEAD systems/riri/)",
+      "Bash(git -C /home/ahmed/HIVE ls-files systems/riri/)",
+      "Bash(git -C /home/ahmed/HIVE ls-files --others --exclude-standard --directory systems/riri/)",
+      "Bash(git -C /home/ahmed/HIVE ls-files systems/)",
+      "Bash(git -C /home/ahmed/HIVE ls-files systems/riri)",
+      "Bash(git -C /home/ahmed/HIVE status systems/riri --porcelain)",
+      "Bash(git -C /home/ahmed/HIVE ls-tree HEAD systems/riri)",
+      "Bash(git -C /home/ahmed/HIVE rm --cached systems/riri)",
+      "Bash(rm /home/ahmed/HIVE/systems/riri)",
+      "Bash(mv /home/ahmed/projects/riri /home/ahmed/HIVE/systems/riri)",
+      "Bash(ln -sf /home/ahmed/HIVE/systems/riri /home/ahmed/projects/riri)",
+      "Bash(git -C /home/ahmed/HIVE status --short systems/riri/)",
+      "Bash(git -C /home/ahmed/HIVE add systems/riri/)"
+    ]
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "tested": [
+    {
+      "model": "qwen/qwen3-coder-480b-a35b-instruct",
+      "status": "tools_ok",
+      "reason": "called get_result"
+    },
+    {
+      "model": "meta/llama-4-maverick-17b-128e-instruct",
+      "status": "no_tools",
+      "reason": "text only: '{\"name\": \"get_result\", \"parameters\": {\"value\": \"test-ok\"}}'"
+    },
+    {
+      "model": "meta/llama-3.3-70b-instruct",
+      "status": "tools_ok",
+      "reason": "called get_result"
+    },
+    {
+      "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+      "status": "tools_ok",
+      "reason": "called get_result"
+    },
+    {
+      "model": "mistralai/devstral-2-123b-instruct-2512",
+      "status": "error",
+      "reason": "HTTP 400: Function id '7fe236cd-dab4-40d4-a139-b28d6673ffd3': DEGRADED function cannot be invoked"
+    },
+    {
+      "model": "qwen/qwen3-next-80b-a3b-instruct",
+      "status": "tools_ok",
+      "reason": "called get_result"
+    },
+    {
+      "model": "openai/gpt-oss-20b",
+      "status": "tools_ok",
+      "reason": "called get_result"
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "status": "tools_ok",
+      "reason": "called get_result"
+    },
+    {
+      "model": "nvidia/llama-3.1-nemotron-ultra-253b-v1",
+      "status": "not_found",
+      "reason": "404"
+    },
+    {
+      "model": "moonshotai/kimi-k2.6",
+      "status": "tools_ok",
+      "reason": "called get_result"
+    },
+    {
+      "model": "deepseek-ai/deepseek-v4-pro",
+      "status": "tools_ok",
+      "reason": "called get_result"
+    },
+    {
+      "model": "mistralai/mistral-large-3-675b-instruct-2512",
+      "status": "tools_ok",
+      "reason": "called get_result"
+    },
+    {
+      "model": "deepseek-ai/deepseek-v4-flash",
+      "status": "timeout",
+      "reason": ">20s"
+    },
+    {
+      "model": "moonshotai/kimi-k2-instruct",
+      "status": "timeout",
+      "reason": ">20s"
+    }
+  ],
+  "timestamp": "2026-05-09T06:00:45.835319"
+}

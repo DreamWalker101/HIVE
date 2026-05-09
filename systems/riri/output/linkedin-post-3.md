@@ -1,0 +1,1 @@
+RiRi, my personal AI assistant, can now delegate tasks to other AIs and teach itself new skills. This is made possible by the agent toolkit, which includes spawn_agent, pipeline_intake, and write-skill. These tools allow RiRi to work with other AIs, such as Claude Code and Codex, and to learn from its own experiences. #AI #AgentToolkit #RiRi

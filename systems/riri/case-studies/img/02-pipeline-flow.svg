@@ -1,0 +1,45 @@
+<svg width="720" height="280" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+    <path d="M0,0 L0,6 L8,3 z" fill="#666"/>
+  </marker>
+</defs>
+<rect width="720" height="280" fill="#f8f9fa" rx="12"/>
+<text x="360" y="28" text-anchor="middle" font-size="15" font-weight="bold" font-family="sans-serif" fill="#222">Claude Pipeline Awareness — Data Flow</text>
+<rect x="20" y="50" width="110" height="45" rx="8" fill="#6c757d" stroke="#2c5f8a" stroke-width="1.5"/>
+<text x="75" y="63" text-anchor="middle" font-family="monospace" font-size="12" fill="white">Claude Code</text><text x="75" y="81" text-anchor="middle" font-family="monospace" font-size="12" fill="white">Session</text>
+<rect x="180" y="50" width="110" height="45" rx="8" fill="#0d6efd" stroke="#2c5f8a" stroke-width="1.5"/>
+<text x="235" y="63" text-anchor="middle" font-family="monospace" font-size="12" fill="white">Hook Script</text><text x="235" y="81" text-anchor="middle" font-family="monospace" font-size="12" fill="white">riri-pipeline.py</text>
+<rect x="350" y="30" width="110" height="40" rx="8" fill="#198754" stroke="#2c5f8a" stroke-width="1.5"/>
+<text x="405" y="50" text-anchor="middle" font-family="monospace" font-size="12" fill="white">SessionStart</text>
+<rect x="350" y="80" width="110" height="40" rx="8" fill="#fd7e14" stroke="#2c5f8a" stroke-width="1.5"/>
+<text x="405" y="100" text-anchor="middle" font-family="monospace" font-size="12" fill="white">PostToolUse</text>
+<rect x="350" y="130" width="110" height="40" rx="8" fill="#dc3545" stroke="#2c5f8a" stroke-width="1.5"/>
+<text x="405" y="150" text-anchor="middle" font-family="monospace" font-size="12" fill="white">Stop → JSONL</text>
+<rect x="520" y="80" width="110" height="45" rx="8" fill="#6f42c1" stroke="#2c5f8a" stroke-width="1.5"/>
+<text x="575" y="93" text-anchor="middle" font-family="monospace" font-size="12" fill="white">pipeline.db</text><text x="575" y="111" text-anchor="middle" font-family="monospace" font-size="12" fill="white">(SQLite)</text>
+<rect x="520" y="155" width="110" height="45" rx="8" fill="#20c997" stroke="#2c5f8a" stroke-width="1.5"/>
+<text x="575" y="168" text-anchor="middle" font-family="monospace" font-size="12" fill="white">Ollama Distill</text><text x="575" y="186" text-anchor="middle" font-family="monospace" font-size="12" fill="white">gemma3:4b</text>
+<rect x="350" y="210" width="110" height="45" rx="8" fill="#6f42c1" stroke="#2c5f8a" stroke-width="1.5"/>
+<text x="405" y="223" text-anchor="middle" font-family="monospace" font-size="12" fill="white">memory.db</text><text x="405" y="241" text-anchor="middle" font-family="monospace" font-size="12" fill="white">(Embeddings)</text>
+<rect x="180" y="210" width="110" height="45" rx="8" fill="#0d6efd" stroke="#2c5f8a" stroke-width="1.5"/>
+<text x="235" y="223" text-anchor="middle" font-family="monospace" font-size="12" fill="white">RiRi Query</text><text x="235" y="241" text-anchor="middle" font-family="monospace" font-size="12" fill="white">"what did Claude do?"</text>
+<line x1="130" y1="72" x2="180" y2="72" stroke="#666" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<line x1="290" y1="60" x2="350" y2="50" stroke="#666" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<line x1="290" y1="72" x2="350" y2="100" stroke="#666" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<line x1="290" y1="85" x2="350" y2="150" stroke="#666" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<line x1="460" y1="100" x2="520" y2="100" stroke="#666" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<line x1="460" y1="150" x2="520" y2="175" stroke="#666" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<line x1="520" y1="200" x2="460" y2="232" stroke="#666" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<line x1="460" y1="232" x2="350" y2="232" stroke="#666" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<line x1="350" y1="232" x2="290" y2="232" stroke="#666" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+</svg>

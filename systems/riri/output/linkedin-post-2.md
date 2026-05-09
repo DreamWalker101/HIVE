@@ -1,0 +1,1 @@
+RiRi, my personal AI assistant, now has a memory stack that allows it to remember what I built last week. This is made possible by memory-lancedb, which provides vector memory and auto-capture/auto-recall capabilities. RiRi also reads its own session history on cold-start, making it a more efficient and effective tool for my work. #AI #Memory #RiRi

@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.pyo
+.env
+output/images/
+output/videos/
+output/*.mp4
+output/*.png
+output/*.jpg
+*.db
+*.db-shm
+*.db-wal
+.DS_Store
+node_modules/

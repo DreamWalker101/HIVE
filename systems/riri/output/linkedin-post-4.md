@@ -1,0 +1,1 @@
+My personal AI assistant, RiRi, is a full-stack system that includes an OpenClaw gateway, NIM LLM, plugin layer, WhatsApp and Discord channels, HyperFrames and Remotion for video, morning briefing cron, and evolution system. This system allows me to work efficiently and effectively, and to continuously improve my AI assistant. #AI #FullStack #RiRi

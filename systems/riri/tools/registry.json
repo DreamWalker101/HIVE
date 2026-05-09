@@ -1,0 +1,326 @@
+{
+  "version": "1.0",
+  "updated": "2026-04-12",
+  "categories": {
+    "web_search": {
+      "description": "Search the internet, scrape pages, extract content",
+      "tools": {
+        "ddgs": {
+          "bin": "ddgs",
+          "description": "DuckDuckGo search — text, news, images, video, books",
+          "examples": [
+            "ddgs text -k 'latest AI news' -m 5",
+            "ddgs news -k 'Ahmed Tavren outreach' -m 3",
+            "ddgs extract -u 'https://example.com'"
+          ]
+        },
+        "trafilatura": {
+          "bin": "trafilatura",
+          "description": "Extract clean text from any webpage",
+          "examples": [
+            "trafilatura -u 'https://example.com'",
+            "trafilatura -u 'https://example.com' --json"
+          ]
+        },
+        "yt_dlp": {
+          "bin": "yt-dlp",
+          "description": "Download YouTube videos, audio, playlists",
+          "examples": [
+            "yt-dlp 'https://youtube.com/watch?v=...' -x --audio-format mp3",
+            "yt-dlp --get-title 'https://youtube.com/watch?v=...'"
+          ]
+        }
+      }
+    },
+    "browser_automation": {
+      "description": "Control Chrome browser, click, fill forms, extract data",
+      "tools": {
+        "browser_use": {
+          "bin": "browser-use",
+          "description": "AI-powered browser automation — open pages, click, type, extract, screenshot",
+          "examples": [
+            "browser-use open 'https://example.com'",
+            "browser-use screenshot /tmp/ss.png",
+            "browser-use extract 'all product prices'",
+            "browser-use click 'Submit button'",
+            "browser-use python 'script.py'"
+          ]
+        },
+        "google_chrome": {
+          "bin": "google-chrome",
+          "description": "Launch Chrome, open URLs, headless screenshots",
+          "examples": [
+            "google-chrome --new-tab 'https://example.com'",
+            "google-chrome --headless --screenshot=/tmp/ss.png 'https://example.com'",
+            "google-chrome --headless --dump-dom 'https://example.com'"
+          ]
+        }
+      }
+    },
+    "google_workspace": {
+      "description": "Gmail, Google Drive, Calendar, Docs, Sheets, Tasks, Keep",
+      "tools": {
+        "gws": {
+          "bin": "gws",
+          "description": "Full Google Workspace CLI — email, drive, calendar, docs, tasks",
+          "auth_note": "If auth error: run 'gws auth login'",
+          "examples": [
+            "gws gmail users messages list --params '{\"userId\":\"me\",\"maxResults\":10,\"labelIds\":\"INBOX\"}'",
+            "gws gmail users messages get --params '{\"userId\":\"me\",\"id\":\"<msgId>\",\"format\":\"full\"}'",
+            "gws drive files list --params '{\"pageSize\":10}'",
+            "gws calendar events list --params '{\"calendarId\":\"primary\",\"maxResults\":5}'",
+            "gws tasks tasklists list --params '{}' ",
+            "gws tasks tasks list --params '{\"tasklist\":\"@default\"}'",
+            "gws keep notes list --params '{}'"
+          ]
+        }
+      }
+    },
+    "ai_models": {
+      "description": "Run local and cloud AI models",
+      "tools": {
+        "ollama": {
+          "bin": "ollama",
+          "description": "Run local LLMs — gemma3:4b, llama3.1:8b, qwen2.5-coder:7b",
+          "models": ["gemma3:4b", "gemma3:12b", "llama3.1:8b", "qwen2.5-coder:7b"],
+          "examples": [
+            "ollama run gemma3:4b 'explain this code'",
+            "ollama run qwen2.5-coder:7b 'write a python function to...'",
+            "echo 'prompt' | ollama run llama3.1:8b"
+          ]
+        },
+        "gemini": {
+          "bin": "gemini",
+          "description": "Google Gemini CLI — text + vision (image analysis)",
+          "examples": [
+            "gemini 'explain this error'",
+            "gemini /path/to/image.png 'what is in this image'"
+          ]
+        },
+        "gsd": {
+          "bin": "gsd",
+          "description": "GSD AI assistant — agentic task runner with Claude/GPT",
+          "examples": [
+            "gsd -p 'summarise the latest outreach campaign results'",
+            "gsd --model claude-opus-4-6 -p 'review this code'",
+            "gsd --continue"
+          ]
+        },
+        "litellm": {
+          "bin": "litellm",
+          "description": "LiteLLM proxy — unified API for all LLM providers",
+          "examples": [
+            "litellm --model ollama/gemma3:4b --test"
+          ]
+        },
+        "openai": {
+          "bin": "openai",
+          "description": "OpenAI CLI — completions, embeddings, files",
+          "examples": [
+            "openai api chat.completions.create -m gpt-4o-mini -g user 'hello'"
+          ]
+        }
+      }
+    },
+    "devops_git": {
+      "description": "Git, GitHub, Docker, Vercel, Neon DB deployments",
+      "tools": {
+        "gh": {
+          "bin": "gh",
+          "description": "GitHub CLI — issues, PRs, repos, actions, secrets",
+          "examples": [
+            "gh issue list --repo Tavren/outreach-engine",
+            "gh pr create --title 'fix: ...' --body '...'",
+            "gh run list --limit 5",
+            "gh secret set MY_KEY --body 'value'"
+          ]
+        },
+        "git": {
+          "bin": "git",
+          "description": "Version control",
+          "examples": [
+            "git log --oneline -10",
+            "git diff HEAD~1",
+            "git add -A && git commit -m 'feat: ...' && git push"
+          ]
+        },
+        "docker": {
+          "bin": "docker",
+          "description": "Container management",
+          "examples": [
+            "docker ps",
+            "docker logs <container>",
+            "docker-compose up -d"
+          ]
+        },
+        "vercel": {
+          "bin": "vercel",
+          "description": "Deploy to Vercel",
+          "examples": [
+            "vercel --prod",
+            "vercel env list",
+            "vercel logs <deployment-url>"
+          ]
+        },
+        "neonctl": {
+          "bin": "neonctl",
+          "description": "Neon serverless Postgres — branches, databases",
+          "examples": [
+            "neonctl branches list",
+            "neonctl connection-string --branch main"
+          ]
+        }
+      }
+    },
+    "outreach_engine": {
+      "description": "Tavren outreach email automation system",
+      "tools": {
+        "outreach": {
+          "bin": "outreach",
+          "description": "Control the outreach engine — run campaigns, view leads, stats",
+          "examples": [
+            "outreach status",
+            "outreach start",
+            "outreach leads --status sent --limit 20",
+            "outreach stats",
+            "outreach run --campaign-id <id> --limit 10",
+            "outreach settings"
+          ]
+        }
+      }
+    },
+    "document_processing": {
+      "description": "Parse PDFs, extract text, process documents",
+      "tools": {
+        "docling": {
+          "bin": "docling",
+          "description": "Advanced document processing — PDF, DOCX, images to markdown/JSON",
+          "examples": [
+            "docling /path/to/doc.pdf",
+            "docling /path/to/doc.pdf --to markdown"
+          ]
+        },
+        "pdfplumber": {
+          "bin": "python3 -m pdfplumber",
+          "description": "Extract text and tables from PDFs",
+          "examples": [
+            "python3 -c \"import pdfplumber; pdf=pdfplumber.open('file.pdf'); print(pdf.pages[0].extract_text())\""
+          ]
+        },
+        "magika": {
+          "bin": "magika",
+          "description": "AI-powered file type detection",
+          "examples": [
+            "magika /path/to/unknown-file",
+            "magika --dir /path/to/folder"
+          ]
+        },
+        "mammoth": {
+          "bin": "mammoth",
+          "description": "Convert DOCX to HTML/markdown",
+          "examples": [
+            "mammoth doc.docx --output-format=markdown > doc.md"
+          ]
+        }
+      }
+    },
+    "media": {
+      "description": "Video, audio, image processing",
+      "tools": {
+        "ffmpeg": {
+          "bin": "ffmpeg",
+          "description": "Video/audio conversion, cutting, merging",
+          "examples": [
+            "ffmpeg -i input.mp4 -vn output.mp3",
+            "ffmpeg -i input.mp4 -ss 00:01:00 -t 30 clip.mp4"
+          ]
+        },
+        "convert": {
+          "bin": "convert",
+          "description": "ImageMagick — image resize, convert, annotate",
+          "examples": [
+            "convert input.png -resize 800x600 output.jpg",
+            "convert *.png output.pdf"
+          ]
+        }
+      }
+    },
+    "data": {
+      "description": "JSON processing, CSV, data transformation",
+      "tools": {
+        "jq": {
+          "bin": "jq",
+          "description": "JSON processor — filter, transform, extract fields",
+          "examples": [
+            "cat data.json | jq '.items[].name'",
+            "curl -s api.example.com | jq '.results | length'"
+          ]
+        },
+        "chroma": {
+          "bin": "chroma",
+          "description": "ChromaDB CLI — manage vector database collections",
+          "examples": [
+            "chroma --help"
+          ]
+        }
+      }
+    },
+    "system_services": {
+      "description": "Manage background services and system resources",
+      "tools": {
+        "systemctl": {
+          "bin": "systemctl",
+          "description": "Manage systemd services",
+          "examples": [
+            "systemctl --user status pipeline-bot",
+            "systemctl --user restart pipeline-bot",
+            "systemctl --user list-units --type=service"
+          ]
+        },
+        "riri": {
+          "bin": "riri",
+          "description": "Send notifications to RiRi overlay",
+          "examples": [
+            "riri 'Task complete'",
+            "riri 'Error: build failed'"
+          ]
+        }
+      }
+    },
+    "ml_training": {
+      "description": "Fine-tune models, run training, manage datasets",
+      "tools": {
+        "huggingface_cli": {
+          "bin": "huggingface-cli",
+          "description": "HuggingFace CLI — download models, datasets, upload",
+          "examples": [
+            "huggingface-cli download mistralai/Mistral-7B-v0.1",
+            "huggingface-cli upload my-org/my-model ./model-folder"
+          ]
+        },
+        "transformers_cli": {
+          "bin": "transformers-cli",
+          "description": "Transformers CLI — convert, upload models",
+          "examples": [
+            "transformers-cli convert --model_type bert --tf_checkpoint ./tf_model --config bert-base-uncased --pytorch_dump_output ./pt"
+          ]
+        },
+        "unsloth": {
+          "bin": "unsloth",
+          "description": "Fast fine-tuning — train LLMs 2x faster",
+          "examples": [
+            "unsloth --help"
+          ]
+        },
+        "accelerate": {
+          "bin": "accelerate",
+          "description": "HuggingFace Accelerate — distributed training",
+          "examples": [
+            "accelerate launch train.py",
+            "accelerate config"
+          ]
+        }
+      }
+    }
+  }
+}

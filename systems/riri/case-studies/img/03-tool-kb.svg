@@ -1,0 +1,40 @@
+<svg width="680" height="260" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+    <path d="M0,0 L0,6 L8,3 z" fill="#666"/>
+  </marker>
+</defs>
+<rect width="680" height="260" fill="#f8f9fa" rx="12"/>
+<text x="340" y="28" text-anchor="middle" font-size="15" font-weight="bold" font-family="sans-serif" fill="#222">Tool Knowledge Base — Indexing + Query</text>
+<rect x="20" y="50" width="110" height="40" rx="8" fill="#198754" stroke="#2c5f8a" stroke-width="1.5"/>
+<text x="75" y="61" text-anchor="middle" font-family="monospace" font-size="12" fill="white">registry.json</text><text x="75" y="79" text-anchor="middle" font-family="monospace" font-size="12" fill="white">31 tools</text>
+<rect x="20" y="105" width="110" height="40" rx="8" fill="#198754" stroke="#2c5f8a" stroke-width="1.5"/>
+<text x="75" y="116" text-anchor="middle" font-family="monospace" font-size="12" fill="white">project *.md</text><text x="75" y="134" text-anchor="middle" font-family="monospace" font-size="12" fill="white">747 files</text>
+<rect x="20" y="160" width="110" height="40" rx="8" fill="#198754" stroke="#2c5f8a" stroke-width="1.5"/>
+<text x="75" y="171" text-anchor="middle" font-family="monospace" font-size="12" fill="white">AGENTS.md</text><text x="75" y="189" text-anchor="middle" font-family="monospace" font-size="12" fill="white">12 files</text>
+<rect x="200" y="100" width="110" height="50" rx="8" fill="#0d6efd" stroke="#2c5f8a" stroke-width="1.5"/>
+<text x="255" y="116" text-anchor="middle" font-family="monospace" font-size="12" fill="white">riri-index</text><text x="255" y="134" text-anchor="middle" font-family="monospace" font-size="12" fill="white">nomic-embed-text</text>
+<rect x="380" y="100" width="110" height="50" rx="8" fill="#6f42c1" stroke="#2c5f8a" stroke-width="1.5"/>
+<text x="435" y="116" text-anchor="middle" font-family="monospace" font-size="12" fill="white">ChromaDB</text><text x="435" y="134" text-anchor="middle" font-family="monospace" font-size="12" fill="white">3,310 chunks</text>
+<rect x="200" y="190" width="130" height="45" rx="8" fill="#6c757d" stroke="#2c5f8a" stroke-width="1.5"/>
+<text x="265" y="212" text-anchor="middle" font-family="monospace" font-size="12" fill="white">User task: "search news"</text>
+<rect x="380" y="190" width="110" height="45" rx="8" fill="#fd7e14" stroke="#2c5f8a" stroke-width="1.5"/>
+<text x="435" y="203" text-anchor="middle" font-family="monospace" font-size="12" fill="white">top-3 tools</text><text x="435" y="221" text-anchor="middle" font-family="monospace" font-size="12" fill="white">+ examples</text>
+<rect x="540" y="150" width="110" height="50" rx="8" fill="#dc3545" stroke="#2c5f8a" stroke-width="1.5"/>
+<text x="595" y="166" text-anchor="middle" font-family="monospace" font-size="12" fill="white">Brain Prompt</text><text x="595" y="184" text-anchor="middle" font-family="monospace" font-size="12" fill="white">+ tool hints</text>
+<line x1="130" y1="70" x2="200" y2="120" stroke="#666" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<line x1="130" y1="125" x2="200" y2="125" stroke="#666" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<line x1="130" y1="180" x2="200" y2="125" stroke="#666" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<line x1="310" y1="125" x2="380" y2="125" stroke="#666" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<line x1="330" y1="212" x2="380" y2="212" stroke="#666" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<line x1="490" y1="212" x2="540" y2="175" stroke="#666" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<line x1="490" y1="125" x2="540" y2="165" stroke="#666" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<text x="340" y="248" text-anchor="middle" font-size="10" fill="#888">Semantic search → right tool every time, no hallucination</text>
+</svg>

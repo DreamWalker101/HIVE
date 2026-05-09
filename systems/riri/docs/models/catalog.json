@@ -1,0 +1,357 @@
+{
+  "_meta": {
+    "fetched": "2026-05-09",
+    "source": "https://integrate.api.nvidia.com/v1/models",
+    "total": 137,
+    "notes": "Tool-call support marked where verified or known from model family docs. 'untested' = not yet verified on this NIM plan."
+  },
+  "models": {
+    "deepseek-ai/deepseek-v4-pro": {
+      "family": "deepseek",
+      "size": "671B MoE",
+      "context": "128K",
+      "tool_calls": true,
+      "tiers": ["design", "code", "reasoning", "general"],
+      "speed": "slow",
+      "notes": "DeepSeek's flagship. Excellent at HTML/CSS/SVG design generation. Strong instruction following."
+    },
+    "deepseek-ai/deepseek-v4-flash": {
+      "family": "deepseek",
+      "size": "unknown",
+      "context": "128K",
+      "tool_calls": "timeout",
+      "tiers": ["design", "code", "general"],
+      "speed": "slow",
+      "notes": "Timed out at 20s in test — may work with longer timeout. Skip for now, use V4 Pro."
+    },
+    "qwen/qwen3-coder-480b-a35b-instruct": {
+      "family": "qwen3",
+      "size": "480B total / 35B active MoE",
+      "context": "32K",
+      "tool_calls": true,
+      "tiers": ["code", "design", "svg"],
+      "speed": "moderate",
+      "notes": "Massive code-specialist. Best on NIM for SVG generation, complex HTML/CSS, animation code."
+    },
+    "qwen/qwen3-next-80b-a3b-instruct": {
+      "family": "qwen3",
+      "size": "80B total / 3B active MoE",
+      "context": "32K",
+      "tool_calls": true,
+      "tiers": ["general", "design", "web-ui"],
+      "speed": "fast",
+      "latency_s": 1.2,
+      "notes": "Current Hermes fallback #1. Fast and reliable tool calls. Good for web/UI/prototype tasks."
+    },
+    "qwen/qwen3-next-80b-a3b-thinking": {
+      "family": "qwen3",
+      "size": "80B total / 3B active MoE",
+      "context": "32K",
+      "tool_calls": false,
+      "tiers": ["reasoning"],
+      "speed": "slow",
+      "notes": "Thinking/reasoning variant. No tool calls in thinking mode. Use for analysis only."
+    },
+    "qwen/qwen3.5-122b-a10b": {
+      "family": "qwen3.5",
+      "size": "122B total / 10B active MoE",
+      "context": "32K",
+      "tool_calls": true,
+      "tiers": ["writing", "general", "design"],
+      "speed": "moderate",
+      "latency_s": 1.9,
+      "notes": "Current Hermes fallback #3. Long-form writing quality. Good for deck/blog/email content."
+    },
+    "qwen/qwen3.5-397b-a17b": {
+      "family": "qwen3.5",
+      "size": "397B total / 17B active MoE",
+      "context": "32K",
+      "tool_calls": true,
+      "tiers": ["general", "reasoning", "design"],
+      "speed": "slow",
+      "notes": "Largest Qwen3.5. Potentially very capable. Untested for tool calls on this plan."
+    },
+    "qwen/qwen2.5-coder-32b-instruct": {
+      "family": "qwen2.5-coder",
+      "size": "32B",
+      "context": "32K",
+      "tool_calls": true,
+      "tiers": ["code"],
+      "speed": "fast",
+      "notes": "Previous gen Qwen coder. Reliable for code tasks, superseded by qwen3-coder-480b."
+    },
+    "nvidia/llama-3.3-nemotron-super-49b-v1": {
+      "family": "nemotron",
+      "size": "49B",
+      "context": "32K",
+      "tool_calls": true,
+      "tiers": ["reasoning", "design", "structured-output"],
+      "speed": "moderate",
+      "latency_s": 1.5,
+      "notes": "Current OD default for infographic/dashboard. Good at structured JSON and reasoning."
+    },
+    "nvidia/llama-3.3-nemotron-super-49b-v1.5": {
+      "family": "nemotron",
+      "size": "49B",
+      "context": "32K",
+      "tool_calls": true,
+      "tiers": ["reasoning", "design", "structured-output"],
+      "speed": "moderate",
+      "notes": "Newer v1.5. Drop-in upgrade from v1. Use this over v1 going forward."
+    },
+    "nvidia/llama-3.1-nemotron-ultra-253b-v1": {
+      "family": "nemotron",
+      "size": "253B",
+      "context": "128K",
+      "tool_calls": false,
+      "tiers": [],
+      "speed": "N/A",
+      "notes": "VERIFIED NOT_FOUND: 404 on this NIM plan. Not available."
+    },
+    "nvidia/nemotron-3-super-120b-a12b": {
+      "family": "nemotron-3",
+      "size": "120B total / 12B active MoE",
+      "context": "32K",
+      "tool_calls": "untested",
+      "tiers": ["general", "reasoning"],
+      "speed": "moderate",
+      "notes": "Nemotron-3 family. Newer than nemotron-4. Untested on this plan."
+    },
+    "moonshotai/kimi-k2.6": {
+      "family": "kimi",
+      "size": "unknown",
+      "context": "1M",
+      "tool_calls": true,
+      "tiers": ["long-context", "reasoning", "design", "general"],
+      "speed": "slow",
+      "latency_s": 20,
+      "notes": "VERIFIED TOOLS_OK with valid key. Previous 404 errors were from expired key, not model limitation. 1M context. Self-identifies as K2.5 (NIM internal). Suitable as Hermes default."
+    },
+    "moonshotai/kimi-k2-instruct": {
+      "family": "kimi",
+      "size": "unknown",
+      "context": "128K",
+      "tool_calls": "untested",
+      "tiers": ["general", "long-context"],
+      "speed": "moderate",
+      "latency_s": 18,
+      "notes": "Standard K2 instruct. Smaller context than k2.6. May support tool calls - untested."
+    },
+    "moonshotai/kimi-k2-thinking": {
+      "family": "kimi",
+      "size": "unknown",
+      "context": "128K",
+      "tool_calls": false,
+      "tiers": ["reasoning"],
+      "speed": "slow",
+      "latency_s": 25,
+      "notes": "Thinking mode only. Requires temp=1.0. No tool calls."
+    },
+    "meta/llama-3.3-70b-instruct": {
+      "family": "llama3.3",
+      "size": "70B",
+      "context": "128K",
+      "tool_calls": true,
+      "tiers": ["general", "fast-fallback"],
+      "speed": "fast",
+      "latency_s": 0.8,
+      "notes": "Current Hermes fallback #4. Fastest option with tool support. Reliable workhorse."
+    },
+    "meta/llama-4-maverick-17b-128e-instruct": {
+      "family": "llama4",
+      "size": "17B dense / 128 experts",
+      "context": "1M",
+      "tool_calls": false,
+      "tiers": ["general", "long-context"],
+      "speed": "fast",
+      "notes": "VERIFIED NO_TOOLS: Returns tool call schema as plain text instead of actual function calls. NIM implementation broken. Do not use for tool-calling workflows."
+    },
+    "meta/llama-3.2-90b-vision-instruct": {
+      "family": "llama3.2-vision",
+      "size": "90B",
+      "context": "128K",
+      "tool_calls": true,
+      "tiers": ["vision", "multimodal"],
+      "speed": "moderate",
+      "notes": "Best vision model on NIM. Use for image analysis tasks."
+    },
+    "meta/llama-3.2-11b-vision-instruct": {
+      "family": "llama3.2-vision",
+      "size": "11B",
+      "context": "128K",
+      "tool_calls": true,
+      "tiers": ["vision", "multimodal"],
+      "speed": "fast",
+      "notes": "Smaller vision model. Faster than 90B, less capable."
+    },
+    "mistralai/mistral-large-3-675b-instruct-2512": {
+      "family": "mistral-large",
+      "size": "675B",
+      "context": "128K",
+      "tool_calls": true,
+      "tiers": ["general", "design", "reasoning"],
+      "speed": "slow",
+      "notes": "Largest Mistral. Very capable. Worth testing for design tasks."
+    },
+    "mistralai/devstral-2-123b-instruct-2512": {
+      "family": "devstral",
+      "size": "123B",
+      "context": "128K",
+      "tool_calls": true,
+      "tiers": ["code", "design"],
+      "speed": "moderate",
+      "notes": "Mistral's dev/code specialist at 123B. Good candidate for HTML/CSS design generation."
+    },
+    "mistralai/mistral-large": {
+      "family": "mistral-large",
+      "size": "~123B",
+      "context": "32K",
+      "tool_calls": true,
+      "tiers": ["general"],
+      "speed": "moderate",
+      "notes": "Original Mistral Large. Superseded by mistral-large-3."
+    },
+    "mistralai/magistral-small-2506": {
+      "family": "magistral",
+      "size": "24B",
+      "context": "128K",
+      "tool_calls": "untested",
+      "tiers": ["reasoning"],
+      "speed": "fast",
+      "notes": "Mistral's small reasoning model. Untested."
+    },
+    "mistralai/mistral-medium-3.5-128b": {
+      "family": "mistral",
+      "size": "128B",
+      "context": "128K",
+      "tool_calls": true,
+      "tiers": ["general", "design"],
+      "speed": "moderate",
+      "notes": "Medium tier Mistral 3.5. Balanced speed/quality."
+    },
+    "openai/gpt-oss-120b": {
+      "family": "openai-oss",
+      "size": "120B",
+      "context": "unknown",
+      "tool_calls": true,
+      "tiers": ["general", "code", "design", "reasoning"],
+      "speed": "moderate",
+      "notes": "VERIFIED TOOLS_OK. Surprisingly capable. Worth considering for design tasks. Origin unclear but performs well."
+    },
+    "openai/gpt-oss-20b": {
+      "family": "openai-oss",
+      "size": "20B",
+      "context": "unknown",
+      "tool_calls": true,
+      "tiers": ["general", "fast-fallback"],
+      "speed": "fast",
+      "notes": "VERIFIED TOOLS_OK. Fast and capable. Good fallback option."
+    },
+    "google/gemma-4-31b-it": {
+      "family": "gemma4",
+      "size": "31B",
+      "context": "128K",
+      "tool_calls": "untested",
+      "tiers": ["general", "multimodal"],
+      "speed": "fast",
+      "notes": "Gemma 4. Multimodal capable. Untested on this plan."
+    },
+    "nvidia/llama-3.1-nemotron-nano-vl-8b-v1": {
+      "family": "nemotron-vl",
+      "size": "8B",
+      "context": "32K",
+      "tool_calls": "untested",
+      "tiers": ["vision", "multimodal"],
+      "speed": "fast",
+      "notes": "Vision-language Nemotron. Small but fast for vision tasks."
+    },
+    "nvidia/nemotron-nano-12b-v2-vl": {
+      "family": "nemotron-vl",
+      "size": "12B",
+      "context": "32K",
+      "tool_calls": "untested",
+      "tiers": ["vision", "multimodal"],
+      "speed": "fast",
+      "notes": "Vision-language Nemotron v2. Updated version of the VL model."
+    },
+    "mistralai/codestral-22b-instruct-v0.1": {
+      "family": "codestral",
+      "size": "22B",
+      "context": "32K",
+      "tool_calls": "untested",
+      "tiers": ["code"],
+      "speed": "fast",
+      "notes": "Mistral's code model. Fast option for lightweight code tasks."
+    },
+    "nvidia/llama-3.1-nemotron-70b-instruct": {
+      "family": "nemotron",
+      "size": "70B",
+      "context": "128K",
+      "tool_calls": true,
+      "tiers": ["general", "reasoning"],
+      "speed": "moderate",
+      "notes": "Previous Nemotron general model. Reliable."
+    },
+    "stepfun-ai/step-3.5-flash": {
+      "family": "step",
+      "size": "unknown",
+      "context": "unknown",
+      "tool_calls": "untested",
+      "tiers": ["general"],
+      "speed": "fast",
+      "notes": "StepFun's flash model. Unknown capabilities on NIM. Untested."
+    },
+    "z-ai/glm-5.1": {
+      "family": "glm",
+      "size": "unknown",
+      "context": "unknown",
+      "tool_calls": "untested",
+      "tiers": ["general"],
+      "speed": "unknown",
+      "notes": "Latest GLM from Zhipu AI. Untested on this plan."
+    },
+    "writer/palmyra-creative-122b": {
+      "family": "palmyra",
+      "size": "122B",
+      "context": "32K",
+      "tool_calls": "untested",
+      "tiers": ["writing", "creative"],
+      "speed": "moderate",
+      "notes": "Creative writing specialist. Potentially good for marketing copy, LinkedIn posts."
+    },
+    "google/deplot": {
+      "family": "deplot",
+      "size": "small",
+      "context": "N/A",
+      "tool_calls": false,
+      "tiers": ["vision", "chart-understanding"],
+      "speed": "fast",
+      "notes": "Specialized for chart/graph understanding. Converts visual charts to data tables. Use for data extraction from images."
+    },
+    "baai/bge-m3": {
+      "family": "embedding",
+      "size": "568M",
+      "context": "8K",
+      "tool_calls": false,
+      "tiers": ["embedding"],
+      "speed": "fast",
+      "notes": "Multilingual embeddings. Use for semantic search."
+    },
+    "nvidia/nv-embedqa-e5-v5": {
+      "family": "embedding",
+      "size": "small",
+      "context": "512",
+      "tool_calls": false,
+      "tiers": ["embedding"],
+      "speed": "fast",
+      "notes": "NVIDIA's QA embedding model."
+    }
+  },
+  "broken": {
+    "minimaxai/minimax-m2.7": "Timeout on tool calls",
+    "minimaxai/minimax-m2.5": "Timeout on tool calls",
+    "deepseek-ai/deepseek-v3.2": "Timeout",
+    "google/gemma-3-27b-it": "Timeout",
+    "mistralai/mistral-large-2-instruct": "404 Not Found (not on this plan)"
+  }
+}
